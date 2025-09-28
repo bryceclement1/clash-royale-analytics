@@ -1,2 +1,2 @@
 # clash-royale-analytics
-Data analytics using data from the clash royale API
+This project implements data analytics into Clash Royale. Data is pulled from the official Clash Royale API. Randomized player battle logs are collected into cleaned CSVs by obtaining randomized clan tags and pulling randomized player tags from those clans. Then, each selected player's battle log is pulled. The features pulled from the battle logs are: battle_id, player_tag, opponent_tag, battle_time, mode, arena, player_crowns, opponent_crowns, is_ladder_tournament, battle_type, and won. This data is then analysed and used to create insights such as card usage/winrate and arena-specific insights.
