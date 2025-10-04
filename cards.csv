@@ -1,4 +1,4 @@
-card_id,name,max_level,elixir,rarity,icon_url,is_champion,is_evolution
+id,name,max_level,elixir,rarity,icon_url,is_champion,is_evolution
 26000000,Knight,14,3,common,https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png,False,False
 26000001,Archers,14,3,common,https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png,False,False
 26000002,Goblins,14,2,common,https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png,False,False
@@ -64,26 +64,26 @@ card_id,name,max_level,elixir,rarity,icon_url,is_champion,is_evolution
 26000062,Magic Archer,6,4,legendary,https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png,False,False
 26000063,Electro Dragon,9,5,epic,https://api-assets.clashroyale.com/cards/300/tN9h6lnMNPCNsx0LMFmvpHgznbDZ1fBRkx-C7UfNmfY.png,False,False
 26000064,Firecracker,14,3,common,https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png,False,False
-26000065,Mighty Miner,4,4,champion,https://api-assets.clashroyale.com/cards/300/Cd9R56yraxTvJiD8xJ2qT2OdsHyh94FqOAarXpbyelo.png,False,False
+26000065,Mighty Miner,4,4,champion,https://api-assets.clashroyale.com/cards/300/Cd9R56yraxTvJiD8xJ2qT2OdsHyh94FqOAarXpbyelo.png,True,False
 26000067,Elixir Golem,12,3,rare,https://api-assets.clashroyale.com/cards/300/puhMsZjCIqy21HW3hYxjrk_xt8NIPyFqjRy-BeLKZwo.png,False,False
 26000068,Battle Healer,12,4,rare,https://api-assets.clashroyale.com/cards/300/KdwXcoigS2Kg-cgA7BJJIANbUJG6SNgjetRQ-MegZ08.png,False,False
-26000069,Skeleton King,4,4,champion,https://api-assets.clashroyale.com/cards/300/dCd69_wN9f8DxwuqOGtR4QgWhHIPIaTNxZ1e23RzAAc.png,False,False
-26000072,Archer Queen,4,5,champion,https://api-assets.clashroyale.com/cards/300/p7OQmOAFTery7zCzlpDdm-LOD1kINTm42AwIHchZfWk.png,False,False
-26000074,Golden Knight,4,4,champion,https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png,False,False
-26000077,Monk,4,5,champion,https://api-assets.clashroyale.com/cards/300/2onG4t4-CxqwFVZAn6zpWxFz3_mG2ksSj4Q7zldo1SM.png,False,False
+26000069,Skeleton King,4,4,champion,https://api-assets.clashroyale.com/cards/300/dCd69_wN9f8DxwuqOGtR4QgWhHIPIaTNxZ1e23RzAAc.png,True,False
+26000072,Archer Queen,4,5,champion,https://api-assets.clashroyale.com/cards/300/p7OQmOAFTery7zCzlpDdm-LOD1kINTm42AwIHchZfWk.png,True,False
+26000074,Golden Knight,4,4,champion,https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png,True,False
+26000077,Monk,4,5,champion,https://api-assets.clashroyale.com/cards/300/2onG4t4-CxqwFVZAn6zpWxFz3_mG2ksSj4Q7zldo1SM.png,True,False
 26000080,Skeleton Dragons,14,4,common,https://api-assets.clashroyale.com/cards/300/qPOtg9uONh47_NLxGhhFc_ww9PlZ6z3Ry507q1NZUXs.png,False,False
 26000083,Mother Witch,6,4,legendary,https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png,False,False
 26000084,Electro Spirit,14,1,common,https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png,False,False
 26000085,Electro Giant,9,7,epic,https://api-assets.clashroyale.com/cards/300/_uChZkNHAMq6tPb3v6A49xinOe3CnhjstOhG6OZbPYc.png,False,False
 26000087,Phoenix,6,4,legendary,https://api-assets.clashroyale.com/cards/300/i0RoY1fs6ay7VAxyFEfZGIPnD002nAKcne9FtJsWBHM.png,False,False
-26000093,Little Prince,4,3,champion,https://api-assets.clashroyale.com/cards/300/dY-gSseki6KBpkIG17safHH5YlB8SErFZO9OXbJxf9w.png,False,False
+26000093,Little Prince,4,3,champion,https://api-assets.clashroyale.com/cards/300/dY-gSseki6KBpkIG17safHH5YlB8SErFZO9OXbJxf9w.png,True,False
 26000095,Goblin Demolisher,12,4,rare,https://api-assets.clashroyale.com/cards/300/KVVOgdn40xasFLYuQv8Go_U_LCV7wSG9q9eE1H7f3Qk.png,False,False
 26000096,Goblin Machine,6,5,legendary,https://api-assets.clashroyale.com/cards/300/-iLlotr6GCFndL_1BSBqWBb6DnsHBhLerd5EblZDNfU.png,False,False
 26000097,Suspicious Bush,12,2,rare,https://api-assets.clashroyale.com/cards/300/vqTzGAjseQv9F5rf4tsFWeocvg0dyPw1j_nB1cmDZfI.png,False,False
-26000099,Goblinstein,4,5,champion,https://api-assets.clashroyale.com/cards/300/mQ20B49dXdk7Nv0lMdLw175M3YvkSpN6KNnho8UKBd8.png,False,False
+26000099,Goblinstein,4,5,champion,https://api-assets.clashroyale.com/cards/300/mQ20B49dXdk7Nv0lMdLw175M3YvkSpN6KNnho8UKBd8.png,True,False
 26000101,Rune Giant,9,4,epic,https://api-assets.clashroyale.com/cards/300/UogMnGHQXT-TOVXRxslKdAKXUPhqUvrD_hV9x8lbzdE.png,False,False
 26000102,Berserker,14,2,common,https://api-assets.clashroyale.com/cards/300/NA6W8S1JBYBlOPwD3dNvJLFvVDKq-UuBs_J3i3ewLFI.png,False,False
-26000103,Boss Bandit,4,6,champion,https://api-assets.clashroyale.com/cards/300/nuceG9o7rAyvyc7D3sp2QSiRYtSOEgraq0NJkDf729s.png,False,False
+26000103,Boss Bandit,4,6,champion,https://api-assets.clashroyale.com/cards/300/nuceG9o7rAyvyc7D3sp2QSiRYtSOEgraq0NJkDf729s.png,True,False
 27000000,Cannon,14,3,common,https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png,False,False
 27000001,Goblin Hut,12,4,rare,https://api-assets.clashroyale.com/cards/300/l8ZdzzNLcwB4u7ihGgxNFQOjCT_njFuAhZr7D6PRF7E.png,False,False
 27000002,Mortar,14,4,common,https://api-assets.clashroyale.com/cards/300/lPOSw6H7YOHq2miSCrf7ZDL3ANjhJdPPDYOTujdNrVE.png,False,False
