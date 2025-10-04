@@ -11,6 +11,13 @@ from dotenv import load_dotenv
 load_dotenv()
 API = "https://api.clashroyale.com/v1"
 
+DATA_DIR = os.environ.get("DATA_DIR", "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+PLAYERS_TXT = os.path.join(DATA_DIR, "players.txt")
+BATTLES_CSV = os.path.join(DATA_DIR, "battles_raw.csv")
+CARDS_CSV   = os.path.join(DATA_DIR, "battle_cards_raw.csv")
+
 def need(k: str) -> str:
     v = os.environ.get(k)
     if not v:
@@ -48,9 +55,9 @@ def fetch_log(token: str, tag: str, retries: int = 5):
 def main():
     token = need("CR_TOKEN")
 
-    if not os.path.exists("players.txt"):
-        sys.exit("players.txt not found. Run 04_random_players_from_clans.py first.")
-    with open("players.txt") as f:
+    if not os.path.exists(PLAYERS_TXT):
+        sys.exit("players.txt not found. Run 03_random_players_from_clans.py first.")
+    with open(PLAYERS_TXT) as f:
         tags = [line.strip() for line in f if line.strip()]
 
     random.shuffle(tags)
@@ -64,7 +71,7 @@ def main():
     cards_cols = ["battle_id","side","card_id","card_level","evolution_level"]
 
     tb = tc = 0
-    with open("battles_raw.csv", "w", newline="") as fb, open("battle_cards_raw.csv", "w", newline="") as fc:
+    with open(BATTLES_CSV, "w", newline="") as fb, open(CARDS_CSV, "w", newline="") as fc:
         bw = csv.DictWriter(fb, fieldnames=battles_cols); bw.writeheader()
         cw = csv.DictWriter(fc, fieldnames=cards_cols);   cw.writeheader()
 
@@ -124,7 +131,7 @@ def main():
             except Exception as e:
                 print("[warn]", tag, e)
 
-    print(f"battles_raw.csv: {tb} rows, battle_cards_raw.csv: {tc} rows")
+    print(f"{os.path.basename(BATTLES_CSV)}: {tb} rows, {os.path.basename(CARDS_CSV)}: {tc} rows")
 
 if __name__ == "__main__":
     main()

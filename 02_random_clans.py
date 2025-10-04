@@ -97,6 +97,8 @@ def random_seeds(num: int, min_len: int = 3, max_len: int = 4):
         base.add(s)
     return list(base)
 
+DATA_DIR = os.environ.get("DATA_DIR", "data")
+os.makedirs(DATA_DIR, exist_ok=True)
 
 def main():
     token = need("CR_TOKEN")
@@ -108,7 +110,7 @@ def main():
     seed_max_len = int(os.environ.get("SEED_MAX_LEN", "4"))
     max_pages = int(os.environ.get("MAX_PAGES_PER_SEED", "6"))
     per_page = int(os.environ.get("LIMIT_PER_PAGE", "50"))
-    out_path = os.environ.get("OUT_PATH", "clans.txt")
+    out_path = os.environ.get("OUT_PATH", os.path.join(DATA_DIR, "clans.txt"))
 
     # optional filters
     locations_env = os.environ.get("CLAN_LOCATIONS")  # e.g. "57000000,57000007"

@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 API = "https://api.clashroyale.com/v1"
 
+DATA_DIR = os.environ.get("DATA_DIR", "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+
 def need(k: str) -> str:
     v = os.environ.get(k)
     if not v:
@@ -42,7 +46,7 @@ def main():
     rows = fetch_cards(token)
     print(f"Fetched {len(rows)} cards")
 
-    with open("cards.csv", "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(DATA_DIR, "cards.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(
             f,
             fieldnames=["id","name","max_level","elixir","rarity","icon_url","is_champion","is_evolution"]

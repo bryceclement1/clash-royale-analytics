@@ -2,13 +2,13 @@
   <img src="assets/clash-royale.png" alt="Clash Royale Analytics" width="820">
 </p>
 
-# Clash Royale Analytics (Portfolio Project)
+# Clash Royale Analytics
 
-**What this is:** A hands-on data pipeline + analysis that pulls live Clash Royale data from the public API, builds tidy CSV datasets (no database required), and generates clear visuals of **card usage rates** and **win rates** overall and **by trophy tier**. Designed to be easy to run locally and straightforward to evaluate.
+**What this is:** A hands-on data pipeline + analysis that pulls live Clash Royale data from the official Clash Royale API, builds tidy CSV datasets, and generates clear visuals of **card usage rates** and **win rates** overall and **by trophy tier**. Designed to be easy to run locally and straightforward to evaluate.
 
 ---
 
-## Highlights (What a Recruiter Should Know)
+## Highlights
 
 - **End-to-end pipeline:** From API ingestion → data normalization → analysis → charts.
 - **Clean modeling:** Ensures each battle is counted once (deduped), derives a single winner per match, and computes usage/win metrics correctly (denominator fixes to avoid filter traps).
@@ -28,7 +28,7 @@
 - Data shaping in pandas (groupby, joins, binning, deduplication)
 - Metric design (correct denominators, winner attribution)
 - Visualization for insights (ranked bar charts, per-bin trend lines)
-- Optional **Power BI** star-schema modeling and DAX measures
+- **Power BI** star-schema modeling and DAX measures
 
 ---
 
@@ -51,16 +51,7 @@
 - **avg_usage_rate_by_bin.png** — meta overview across trophy tiers
 - **bin_<range>_most_used.png / bin_<range>_best_winrate.png** — per-bin charts
 
-(Charts are Matplotlib; easy to embed in reports or share with stakeholders.)
-
----
-
-## Why This Matters
-
-- Shows ability to **design metrics correctly** (avoid common denominator pitfalls).
-- Demonstrates **production-ish ingestion** (pagination, dedupe, resume-safe outputs).
-- Produces **clear, comparable insights** across skill tiers (trophy bins), which mirrors real product analytics segmentation.
-- Keeps implementation **simple and auditable** (CSV-first, no infra required), but scales to BI tools.
+(Charts are Matplotlib; easy to embed in reports.)
 
 ---
 

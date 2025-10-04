@@ -9,6 +9,13 @@ from dotenv import load_dotenv
 load_dotenv()
 API = "https://api.clashroyale.com/v1"
 
+DATA_DIR = os.environ.get("DATA_DIR", "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+CLANS_PATH   = os.path.join(DATA_DIR, "clans.txt")
+PLAYERS_TXT  = os.path.join(DATA_DIR, "players.txt")
+PLAYERS_CSV  = os.path.join(DATA_DIR, "players.csv")
+
 def need(k: str) -> str:
     v = os.environ.get(k)
     if not v:
@@ -45,10 +52,10 @@ def clan_members(token: str, clan_tag: str, retries: int = 5):
 
 def main():
     token = need("CR_TOKEN")
-    if not os.path.exists("clans.txt"):
-        sys.exit("clans.txt not found. Run 03_random_clans.py first.")
+    if not os.path.exists(CLANS_PATH):
+        sys.exit("clans.txt not found. Run 02_random_clans.py first.")
 
-    with open("clans.txt") as f:
+    with open(CLANS_PATH) as f:
         clan_tags = [line.strip() for line in f if line.strip()]
 
     all_players = []
@@ -69,11 +76,11 @@ def main():
     sample_n = int(os.environ.get("N_PLAYERS", "400"))
     sample = all_players[: min(sample_n, len(all_players))]
 
-    with open("players.txt", "w") as f:
+    with open(PLAYERS_TXT, "w") as f:
         for p in sample:
             f.write(p["tag"] + "\n")
 
-    with open("players.csv", "w", newline="") as f:
+    with open(PLAYERS_CSV, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["tag", "name", "trophies", "clan_tag", "clan_name"])
         w.writeheader()
         w.writerows(sample)

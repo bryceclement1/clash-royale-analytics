@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 
 def parse_args():
     p = argparse.ArgumentParser("Analyze Clash Royale CSVs: usage rate, win %, and per-trophy-bin.")
-    p.add_argument("--battles", default="battles_raw.csv")
-    p.add_argument("--battle-cards", default="battle_cards_raw.csv")
-    p.add_argument("--cards", default="cards.csv")
+    p.add_argument("--battles", default="data/battles_raw.csv")
+    p.add_argument("--battle-cards", default="data/battle_cards_raw.csv")
+    p.add_argument("--cards", default="data/cards.csv")
     p.add_argument("--outdir", default="analysis_out")
     p.add_argument("--topn", type=int, default=30)
     p.add_argument("--min-sample", type=int, default=50)
